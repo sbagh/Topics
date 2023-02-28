@@ -1,0 +1,16 @@
+{
+   "blogs": [
+      {
+         "title": "My first blog",
+         "body": "why do we use it?",
+         "author": "mario",
+         "id": 1
+      },
+      {
+         "title": "My 2nd blog",
+         "body": "why do we use it?",
+         "author": "yoshi",
+         "id": 2
+      }
+   ]
+}

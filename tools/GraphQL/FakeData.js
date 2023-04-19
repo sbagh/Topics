@@ -92,4 +92,42 @@ const UserList = [
    },
 ];
 
-module.exports = { UserList };
+const MovieList = [
+   {
+      id: 1,
+      title: "Drum",
+      genre: "Thriller",
+      year: 2007,
+      inTheatres: false,
+   },
+   {
+      id: 2,
+      title: "Unbreakable",
+      genre: "Drama|Sci-Fi",
+      year: 2003,
+      inTheatres: true,
+   },
+   {
+      id: 3,
+      title: "Flying Saucer, The",
+      genre: "Sci-Fi",
+      year: 1999,
+      inTheatres: false,
+   },
+   {
+      id: 4,
+      title: "Gates of Heaven",
+      genre: "Documentary",
+      year: 1967,
+      inTheatres: true,
+   },
+   {
+      id: 5,
+      title: "Possessed",
+      genre: "Drama|Horror",
+      year: 2010,
+      inTheatres: true,
+   },
+];
+
+module.exports = { UserList, MovieList };

@@ -5,6 +5,22 @@ const UserList = [
       username: "Barlas",
       age: 62,
       nationality: "France",
+      friends: [
+         {
+            id: 2,
+            name: "Bethanne",
+            username: "Woodward",
+            age: 55,
+            nationality: "Cuba",
+         },
+         {
+            id: 6,
+            name: "Saundra",
+            username: "Linneman",
+            age: 46,
+            nationality: "Afghanistan",
+         },
+      ],
    },
    {
       id: 2,
@@ -12,20 +28,15 @@ const UserList = [
       username: "Woodward",
       age: 55,
       nationality: "Cuba",
-   },
-   {
-      id: 3,
-      name: "Iggie",
-      username: "Webberley",
-      age: 85,
-      nationality: "Kyrgyzstan",
-   },
-   {
-      id: 4,
-      name: "Nichole",
-      username: "Ivison",
-      age: 97,
-      nationality: "Mongolia",
+      friends: [
+         {
+            id: 1,
+            name: "Kissiah",
+            username: "Barlas",
+            age: 62,
+            nationality: "France",
+         },
+      ],
    },
    {
       id: 5,
@@ -40,14 +51,17 @@ const UserList = [
       username: "Linneman",
       age: 46,
       nationality: "Afghanistan",
+      friends: [
+         {
+            id: 5,
+            name: "Cecilla",
+            username: "Castell",
+            age: 28,
+            nationality: "France",
+         },
+      ],
    },
-   {
-      id: 7,
-      name: "Lazarus",
-      username: "Mauchlen",
-      age: 17,
-      nationality: "Kosovo",
-   },
+
    {
       id: 8,
       name: "Howard",
@@ -56,32 +70,11 @@ const UserList = [
       nationality: "Russia",
    },
    {
-      id: 9,
-      name: "Perry",
-      username: "Pauer",
-      age: 50,
-      nationality: "Indonesia",
-   },
-   {
       id: 10,
       name: "Phillida",
       username: "Greensitt",
       age: 80,
       nationality: "Greece",
-   },
-   {
-      id: 11,
-      name: "Toby",
-      username: "Houltham",
-      age: 20,
-      nationality: "Philippines",
-   },
-   {
-      id: 12,
-      name: "Lara",
-      username: "Waulker",
-      age: 65,
-      nationality: "Mongolia",
    },
    {
       id: 13,
@@ -96,48 +89,6 @@ const UserList = [
       username: "Oldam",
       age: 88,
       nationality: "France",
-   },
-   {
-      id: 15,
-      name: "Megan",
-      username: "Greensite",
-      age: 67,
-      nationality: "Philippines",
-   },
-   {
-      id: 16,
-      name: "Sherlock",
-      username: "Kingsley",
-      age: 62,
-      nationality: "Brazil",
-   },
-   {
-      id: 17,
-      name: "Lina",
-      username: "MacAndie",
-      age: 71,
-      nationality: "Switzerland",
-   },
-   {
-      id: 18,
-      name: "Mandi",
-      username: "Halversen",
-      age: 93,
-      nationality: "South Korea",
-   },
-   {
-      id: 19,
-      name: "Clywd",
-      username: "Girkin",
-      age: 66,
-      nationality: "United States",
-   },
-   {
-      id: 20,
-      name: "Donal",
-      username: "Tracey",
-      age: 94,
-      nationality: "Greece",
    },
 ];
 

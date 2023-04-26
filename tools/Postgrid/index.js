@@ -24,12 +24,27 @@ const postGridClient = new PostGrid({
 // });
 
 //create contact
+// app.post("/createContact", async (req, res) => {
+//    //    console.log(req.body);
+//    const contactDetails = req.body;
+//    const contact = await postGridClient.contact.create(contactDetails);
+//    console.log(contact);
+//    res.send(contact);
+// });
+
+//create contact end point
 app.post("/createContact", async (req, res) => {
-   //    console.log(req.body);
-   const contact = await postGridClient.contact.create(req.body);
+   const contactDetails = req.body;
+   const contact = await createContact(contactDetails);
    console.log(contact);
    res.send(contact);
 });
+
+// postgrid client create contact
+const createContact = async (contactDetails) => {
+   const response = await postGridClient.contact.create(contactDetails);
+   return response;
+};
 
 //delete contact
 app.delete("/deleteContact", async (req, res) => {
@@ -40,4 +55,17 @@ app.delete("/deleteContact", async (req, res) => {
    res.send(contact);
 });
 
+// create Letter
+app.post("/createLetter", async (req, res) => {
+   const letterDetails = req.body;
+   const letter = await postGridClient.letter.create(letterDetails);
+   console.log(letter);
+   res.send(letter);
+});
+
+
+
+
 app.listen(PORT, console.log("listening on port: ", PORT));
+
+

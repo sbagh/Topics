@@ -5,6 +5,7 @@ app.use(express.json());
 
 const PORT = 4444;
 
+// create postgrid client with test api key
 const postGridClient = new PostGrid({
    mail: "test_sk_whLGEJYLGUufMEShNDYe2B",
 });
@@ -22,9 +23,19 @@ const postGridClient = new PostGrid({
 //    jobTitle: "Barkeep",
 // });
 
+//create contact
 app.post("/createContact", async (req, res) => {
    //    console.log(req.body);
    const contact = await postGridClient.contact.create(req.body);
+   console.log(contact);
+   res.send(contact);
+});
+
+//delete contact
+app.delete("/deleteContact", async (req, res) => {
+   const contactID = req.query.contactID;
+   console.log(contactID);
+   const contact = await postGridClient.contact.delete(contactID);
    console.log(contact);
    res.send(contact);
 });

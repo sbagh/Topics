@@ -1,4 +1,4 @@
-const { UserList, MovieList } = require("../FakeData");
+const { UserList, MovieList } = require("../fakeData");
 // const _ = require("lodash");
 
 const resolvers = {

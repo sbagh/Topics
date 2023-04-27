@@ -32,11 +32,19 @@ app.get("/todo/new", (req, res) => {
    res.json(todo);
 });
 
-//dete an item
+//delete an item
 app.delete("/todo/delete/:id", async (req, res) => {
    // find and delete item
    const result = await Todo.findByIdAndDelete(req.params.id);
    res.json(result);
+});
+
+// complete an itme
+app.put("/todo/complete/:id", async (req, res) => {
+   const todo = await Todo.findById(req.params.id);
+   todo.complete = !todo.complete;
+
+   res.json(todo);
 });
 
 app.listen(PORT, () => console.log("server started on port: ", PORT));

@@ -16,7 +16,7 @@ fn main() {
     println!("x is {}", x);
     // let y = 'hi';
     // print("y i s {}", y);
-    //constants
+    //constants - cannot redeclare
     const SECONDS_IN_MINUTE: u32 = 60;
     println!("{}", SECONDS_IN_MINUTE);
 }

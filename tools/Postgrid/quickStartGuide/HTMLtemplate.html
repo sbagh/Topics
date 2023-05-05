@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Letter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
+      .letter {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      .letter h1 {
+        font-size: 24px;
+        margin-top: 0;
+      }
+      .letter p {
+        margin-bottom: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="letter">
+      <h1>Dear {{to.firstName}},</h1>
+      <p> You suck at league :D</p>
+      <p>Sincerely,</p>
+      <p>{{from.firstName}}</p>
+    </div>
+  </body>
+</html>

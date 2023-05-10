@@ -4,9 +4,18 @@
 //3- Sending letters
 //4- Tracking letters and other analytics
 
+// setup environment
 const fetch = require("node-fetch");
 const POSTGRID_URL = "https://api.postgrid.com/print-mail/v1";
 const API_KEY = "test_sk_whLGEJYLGUufMEShNDYe2B";
+
+async function logAwait(x) {
+   try {
+      console.log(await x);
+   } catch (e) {
+      console.error(e);
+   }
+}
 
 // create letter
 async function createLetterWithOptions(

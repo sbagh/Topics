@@ -19,19 +19,6 @@ const templateHTML = `
             margin: 0;
             padding: 0;
          }
-         .letter {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-         }
-         .letter h1 {
-            font-size: 24px;
-            margin-top: 0;
-         }
-         .letter p {
-            margin-bottom: 1em;
-         }
       </style>
    </head>
    <body>
@@ -47,7 +34,7 @@ const templateHTML = `
 </html>`;
 
 //create the template description
-const templateDescription = "this is a test html template";
+const templateDescription = "html test template 2";
 
 // send request
 async function createTemplate(templateDescription, templateHTML) {
@@ -64,7 +51,12 @@ async function createTemplate(templateDescription, templateHTML) {
    };
    // send request to /template
    const response = await fetch(POSTGRID_URL + "/templates", requestOptions);
-   return response;
+   if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+   }
+
+   const data = await response.json();
+   return data;
 }
 
 createTemplate(templateDescription, templateHTML)

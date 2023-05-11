@@ -94,8 +94,7 @@ async function retreiveTemplateID(descriptionString) {
 //    console.log(data)
 // );
 
-//4- updating a template
-
+//4- updating/editing a template
 async function editTemplate(id, options) {
    // request options
    const requestOptions = {
@@ -119,7 +118,7 @@ async function editTemplate(id, options) {
 // editTemplate(template_g9gfaqTqkqA5eTYpLrF7L );
 
 //5- Delete a template
-async function deleteTemplateByID(id) {
+async function deleteTemplateByID(templateID) {
    const requestOptions = {
       method: "DELETE",
       headers: {
@@ -127,17 +126,21 @@ async function deleteTemplateByID(id) {
       },
    };
    const response = await fetch(
-      POSTGRID_URL + `templates/${id}`,
+      POSTGRID_URL + `/templates/${templateID}`,
       requestOptions
    );
 
-   // check if request is complete and if the response is ok
-   if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-   }
+   // // check if request is complete and if the response is ok
+   // if (!response.ok) {
+   //    throw new Error(`HTTP error! status: ${response.status}`);
+   // }
    return await response.json();
 }
 
-deleteTemplateByID("template_cZbKAp3DUYmMitsuG11nE2").then((data) =>
-   console.log(data)
-);
+// retreiveTemplateByID("template_cZbKAp3DUYmMitsuG11nE2").then((data) =>
+//    console.log(data)
+// );
+
+// deleteTemplateByID("template_cZbKAp3DUYmMitsuG11nE2").then((data) =>
+//    console.log(data)
+// );

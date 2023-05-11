@@ -1,16 +1,75 @@
-// retrieve letter/other templates:
-//1- by ID, getting full template object
-//2- by description, getting full template object (not exact description)
-//3- by description, getting tempalte ID (exact description)
-//4- updating a template
-//5- delete template
+// the first step is sending a letter (or postcard, cheque..etc) is creating the lettertemplate
+
+// contents:
+//1- Create template
+//2- retrieve templates:
+//    2.1-  by ID, getting full template object
+//    2.2 - by description, getting full template object (not exact description)
+//    2.3-  by description, getting tempalte ID (exact description)
+//3- updating a template
+//4- delete template
 
 //requirements
 import fetch from "node-fetch";
 const POSTGRID_URL = "https://api.postgrid.com/print-mail/v1";
 const API_KEY = "test_sk_whLGEJYLGUufMEShNDYe2B";
 
-//1 - get the html template given an ID
+//1- Create template (description and html at bottom of this file)
+//sample html template:
+const templateHTML = `
+<html>
+   <head>
+      <style>
+         body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="letter">
+         <h1>Dear {{to.firstName}},</h1>
+         <p>Welcome to our company</p>
+         <p>Sincerely,</p>
+         <p>{{from.firstName}}</p>
+         <p>{{from.jobTitle}}</p>
+         <p>{{from.companyName}}</p>
+      </div>
+   </body>
+</html>`;
+//sample template description
+const templateDescription = "this is a 2nd test html template";
+
+// function to send create template request to postgrid
+async function createTemplateFromHTML(templateDescription, templateHTML) {
+   // set up request parameters
+   const requestOptions = {
+      method: "POST",
+      headers: {
+         "x-api-key": API_KEY,
+         "content-type": "application/json",
+      },
+      body: JSON.stringify({
+         description: templateDescription,
+         html: templateHTML,
+      }),
+   };
+   //send request
+   const response = await fetch(POSTGRID_URL + "/templates", requestOptions);
+   //check if request was sent and if response is ok
+   if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+   }
+   return await response.json();
+}
+// createTemplateFromHTML(templateDescription, templateHTML).then((data) =>
+//    console.log(data)
+// );
+
+//2 - get the html template given an ID
 async function retreiveTemplateByID(id) {
    // request options
    const requestOptions = {

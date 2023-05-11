@@ -1,4 +1,4 @@
-// the first step is sending a letter (or postcard, cheque..etc) is creating the lettertemplate
+// the first step is sending a letter (or postcard, cheque..etc) is creating the letter template
 
 // contents:
 //1- Create template
@@ -69,7 +69,8 @@ async function createTemplateFromHTML(templateDescription, templateHTML) {
 //    console.log(data)
 // );
 
-//2 - get the html template given an ID
+//2 - Retrieve templates
+// 2.1- get the html template given an ID
 async function retreiveTemplateByID(id) {
    // request options
    const requestOptions = {
@@ -96,7 +97,7 @@ async function retreiveTemplateByID(id) {
 //    console.log(data)
 // );
 
-//2- get the html template given the template description, not an exact description
+// 2.2- get the html template given the template description, not an exact description
 async function retreiveTemplateByDescription(descriptionString) {
    // request options
    const requestOptions = {
@@ -132,7 +133,7 @@ async function retreiveTemplateByDescription(descriptionString) {
 //    console.log(data)
 // );
 
-//3 - retrieve by description object, getting tempalte ID (exact description)
+// 2.3- retrieve by description object, getting tempalte ID (exact description)
 async function retreiveTemplateID(descriptionString) {
    // create the query string
    const searchString = encodeURIComponent(
@@ -153,7 +154,7 @@ async function retreiveTemplateID(descriptionString) {
 //    console.log(data)
 // );
 
-//4- updating/editing a template
+//3- updating/editing a template
 async function editTemplate(id, options) {
    // request options
    const requestOptions = {
@@ -176,7 +177,7 @@ async function editTemplate(id, options) {
 }
 // editTemplate(template_g9gfaqTqkqA5eTYpLrF7L );
 
-//5- Delete a template
+//4- Delete a template
 async function deleteTemplateByID(templateID) {
    const requestOptions = {
       method: "DELETE",

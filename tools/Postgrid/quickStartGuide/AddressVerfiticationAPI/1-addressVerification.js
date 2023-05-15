@@ -11,8 +11,12 @@ const testAddress1 = {
    provinceOrState: "NY",
    country: "US",
 };
-
 const testAddress2 = "47 Dietz Ave S, Waterloo, ON";
+const testAddressInternational = {
+   line1: "10 Downing St",
+   city: "London",
+   country: "GB",
+};
 
 //1- verify address
 async function verifyAddress(address) {
@@ -77,9 +81,37 @@ async function verifyAddressBatches(addresses, includeDetails, properCase) {
    return await response.json();
 }
 
-verifyAddressBatches([testAddress1, testAddress2], false, false).then(
-   (data) => {
-      console.log(data);
-      console.log(data.data.results);
-   }
+// verifyAddressBatches([testAddress1, testAddress2], false, false).then(
+//    (data) => {
+//       console.log(data);
+//       console.log(data.data.results);
+//    }
+// );
+
+// international or local address verification
+async function verifyAddress3(
+   address,
+   includeDetails,
+   properCase,
+   international
+) {
+   const requestOptions = {
+      method: "POST",
+      headers: {
+         "x-api-key": API_KEY,
+         "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ address }),
+   };
+   // create the url string
+   const url = `${
+      international ? POSTGRID_INTL_URL : POSTGRID_STANDARD_URL
+   }/verifications?includeDetails=${includeDetails}&properCase=${properCase}`;
+   //response
+   const response = await fetch(url, requestOptions);
+   return await response.json();
+}
+
+verifyAddress3(testAddressInternational, true, true, true).then((data) =>
+   console.log(data)
 );

@@ -60,14 +60,14 @@ async function verifyAddress2(address, includeDetails, properCase) {
 // });
 
 // verify Addressss in batches
-async function verifyAddressBatches([address], includeDetails, properCase) {
+async function verifyAddressBatches(addresses, includeDetails, properCase) {
    const requestOptions = {
       method: "POST",
       headers: {
          "x-api-key": API_KEY,
          "Content-Type": "application/json",
       },
-      body: JSON.stringify({ address }),
+      body: JSON.stringify({ addresses }),
    };
    const response = await fetch(
       POSTGRID_STANDARD_URL +
@@ -80,6 +80,6 @@ async function verifyAddressBatches([address], includeDetails, properCase) {
 verifyAddressBatches([testAddress1, testAddress2], false, false).then(
    (data) => {
       console.log(data);
-      //    console.log(data.data.errors);
+      console.log(data.data.results);
    }
 );

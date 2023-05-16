@@ -38,12 +38,12 @@ async function createContact(firstName, lastName, description, adddress) {
    return await response.json();
 }
 
-// createContact(
-//    "Sami",
-//    "Bagh",
-//    "testing create contact API",
-//    "200 University Ave, Waterloo, ON, Canada"
-// ).then((data) => console.log(data));
+createContact(
+   "Sami3",
+   "Bagh",
+   "testing create contact API",
+   "200 University Ave, Waterloo, ON, Canada"
+).then((data) => console.log(data));
 
 //2- viewing contacts
 // 2.1 - get contacts by id

@@ -1,0 +1,53 @@
+[
+   {
+      "firstName": "Sami",
+      "lastName": "Bagh",
+      "email": "",
+      "phoneNumber": "",
+      "companyName": "Twitter",
+      "jobTitle": "",
+      "addressLine1": "498 George Ryan Ave",
+      "addressLine2": "",
+      "city": "Oakville",
+      "provinceOrState": "ON",
+      "postalOrZip": "",
+      "countryCode": "CA",
+      "metadata": {
+         "favoriteFood": "Pizza"
+      }
+   },
+   {
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "",
+      "phoneNumber": "",
+      "companyName": "Apple",
+      "jobTitle": "",
+      "addressLine1": "498 George Ryan Ave",
+      "addressLine2": "",
+      "city": "Oakville",
+      "provinceOrState": "ON",
+      "postalOrZip": "",
+      "countryCode": "CA",
+      "metadata": {
+         "favoriteFood": "Burger"
+      }
+   },
+   {
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "email": "",
+      "phoneNumber": "",
+      "companyName": "AMD",
+      "jobTitle": "",
+      "addressLine1": "498 George Ryan Ave",
+      "addressLine2": "",
+      "city": "Oakville",
+      "provinceOrState": "ON",
+      "postalOrZip": "",
+      "countryCode": "CA",
+      "metadata": {
+         "favoriteFood": "Fries"
+      }
+   }
+]

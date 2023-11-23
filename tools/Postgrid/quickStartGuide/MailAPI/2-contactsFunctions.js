@@ -8,7 +8,9 @@
 //requirements
 import fetch from "node-fetch";
 const POSTGRID_URL = "https://api.postgrid.com/print-mail/v1";
-const API_KEY = "test_sk_whLGEJYLGUufMEShNDYe2B";
+const POSTGRID_Local = "http://localhost:4001/v1";
+
+const API_KEY = "test_sk_9bNemLux1WJ85BMxwtg5xz";
 
 //1- Create contact
 async function createContact(firstName, lastName, description, adddress) {
@@ -28,7 +30,7 @@ async function createContact(firstName, lastName, description, adddress) {
    };
 
    //send request to /contacts endpoint
-   const response = await fetch(POSTGRID_URL + "/contacts", requestOptions);
+   const response = await fetch(POSTGRID_Local + "/contacts", requestOptions);
 
    //check status of request, if successful, get as json
    if (!response.ok) {

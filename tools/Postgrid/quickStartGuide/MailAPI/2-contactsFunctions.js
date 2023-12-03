@@ -10,7 +10,7 @@ import fetch from "node-fetch";
 const POSTGRID_URL = "https://api.postgrid.com/print-mail/v1";
 const POSTGRID_Local = "http://localhost:4001/v1";
 
-const API_KEY = "test_sk_9bNemLux1WJ85BMxwtg5xz";
+const API_KEY = "key";
 
 //1- Create contact
 async function createContact(firstName, lastName, description, adddress) {

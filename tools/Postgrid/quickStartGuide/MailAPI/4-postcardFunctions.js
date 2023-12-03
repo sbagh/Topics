@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 import fs from "fs";
 const POSTGRID_URL = "https://api.postgrid.com/print-mail/v1";
 const POSTGRID_Local = "http://localhost:4000/v1";
-const API_KEY = "test_sk_7Dqujht6tA5DE5JVDJToik";
+const API_KEY = "key";
 
 // letter with pdf link and to is an object not contact id
 async function createPostcard(recepient, sender, pdf) {

@@ -8,7 +8,7 @@ import fetch from "node-fetch";
 import fs from "fs";
 const POSTGRID_URL = "https://api.postgrid.com/print-mail/v1/letters";
 // const POSTGRID_Local = "http://localhost:4000/v1";
-const API_KEY = "live_sk_bf9LkYPA3i9qxtSEuBHVyG";
+const API_KEY = "key";
 
 const createLetter = async (recipient, sender, pdf) => {
    const requestOptions = {

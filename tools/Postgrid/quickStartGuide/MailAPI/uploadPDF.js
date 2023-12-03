@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 const POSTGRID_URL = "http://localhost:4000/v1";
-const API_KEY = "test_sk_9bNemLux1WJ85BMxwtg5xz";
+const API_KEY = "key";
 import fs from "fs";
 
 async function createLetter(recepient, sender, pdf) {

@@ -12,7 +12,7 @@
 //requirements
 import fetch from "node-fetch";
 const POSTGRID_URL = "https://api.postgrid.com/print-mail/v1";
-const API_KEY = "test_sk_whLGEJYLGUufMEShNDYe2B";
+const API_KEY = "key";
 
 //1- Create template (description and html at bottom of this file)
 //sample html template:

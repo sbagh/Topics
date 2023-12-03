@@ -2,7 +2,7 @@
 import fetch from "node-fetch";
 import FormData from "form-data";
 const BANK_URL = "https://api.postgrid.com/print-mail/v1/bank_accounts";
-const API_KEY = "test_sk_whLGEJYLGUufMEShNDYe2B";
+const API_KEY = "key";
 
 //1- create a canadian bank account
 //Body of this request is provided as multipart/form-data. This is because we must upload a signature image with the request.

@@ -10,7 +10,7 @@ app.use(express.json());
 const PORT = 4444;
 // create postgrid client with test api key
 const postGridClient = new PostGrid({
-   mail: "test_sk_whLGEJYLGUufMEShNDYe2B",
+   mail: "key",
 });
 
 // ---------------- 1. Contacts API calls ---------------- //
@@ -33,9 +33,7 @@ app.delete("/deleteContact", async (req, res) => {
 });
 
 // list contacts
-app.get("/listContacts", async (req, res) => {
-   
-});
+app.get("/listContacts", async (req, res) => {});
 
 // ---------------- 2. Letter API calls ---------------- //
 
